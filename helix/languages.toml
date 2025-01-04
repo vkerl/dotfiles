@@ -1,0 +1,15 @@
+
+[[language]]
+name = "typescript"
+language-servers = ["typescript-language-server"] #, "eslint", "emmet-ls" ]
+indent = { tab-width = 4, unit = "    " }
+# formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+formatter = { command = "dprint", args = ["fmt", "--stdin", "ts"] }
+# auto-format = true
+file-types = ["ts"]
+
+[language-server.zls]
+command = "D:\\bin\\zls.exe"
+config.zig_exe_path = "D:\\bin\\zls.exe"
+config.enable_build_on_save = true
+config.build_on_save_step = "check"
